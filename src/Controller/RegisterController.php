@@ -74,4 +74,24 @@ class RegisterController extends AbstractController
 
         return new JsonResponse('User registered successfully', Response::HTTP_CREATED);
     }
+
+    // #[Route('/login', name: 'user_login', methods: ['POST'])]
+    // public function login(Request $request): JsonResponse
+    // {
+    //     $credentials = json_decode($request->getContent(), true);
+    //     $email = $credentials['email'];
+    //     $password = $credentials['password'];
+
+    //     $user = $this->userRepository->findOneBy(['email' => $email]);
+
+    //     if (!$user || !$this->passwordHasher->isPasswordValid($user, $password)) {
+    //         return new JsonResponse('Invalid credentials', Response::HTTP_UNAUTHORIZED);
+    //     }
+
+    //     $token = $this->jwtManager->create($user);
+
+    //     return new JsonResponse([
+    //         'token' => $token,
+    //     ]);
+    // }
 }

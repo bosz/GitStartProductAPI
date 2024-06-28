@@ -1,0 +1,7 @@
+App\Entity\Product:
+    product_1:
+        name: <word()>
+        price: <numberBetween(100,10000)>
+        quantity: <numberBetween(1, 100)>
+        description: <text()>
+        owner: '@user_1'
